@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div class="dark-mode-toggle">
+    <label><input type="checkbox" id="toggle-dark" />Dark Mode</label>
+  </div>
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Undangan Pernikahan</h1>
+      <p>Yuk rayakan cinta kami!</p>
+      <button id="open-invitation">Buka Undangan</button>
+    </div>
+  </div>
+
+  <!-- Dekorasi Pernikahan -->
+  <div class="bunga">
+    <span style="left: 10%; animation-delay: 0s;">🌸</span>
+    <span style="left: 25%; animation-delay: 1s;">💐</span>
+    <span style="left: 40%; animation-delay: 2s;">🌷</span>
+    <span style="left: 60%; animation-delay: 1.5s;">🌺</span>
+    <span style="left: 75%; animation-delay: 0.5s;">🌹</span>
+    <span style="left: 90%; animation-delay: 2.5s;">🌼</span>
+  </div>
+
+  <!-- Halaman Undangan Detail -->
+  <main id="invitation-page" class="hidden fade-in">
+    <section class="couple">
+      <h2>Andi & Rina</h2>
+      <p>Dengan bahagia mengundang Anda untuk merayakan pernikahan kami</p>
+      <div class="couple-names">
+        <div>
+          <h3>Andi Saputra</h3>
+          <p>Putra dari Bapak Ahmad & Ibu Fatimah</p>
+        </div>
+        <div>
+          <h3>Rina Marlina</h3>
+          <p>Putri dari Bapak Budi & Ibu Siti</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown">
+      <h3>Menuju Hari Bahagia</h3>
+      <div id="countdown-timer">00 Hari 00 Jam 00 Menit 00 Detik</div>
+    </section>
+
+    <section class="location">
+      <h3>Lokasi Acara</h3>
+      <p>Jl. Bahagia No.123, Jakarta</p>
+      <div class="map-container">
+        <a href="https://maps.google.com" target="_blank" class="map-link">Lihat di Google Maps</a>
+      </div>
+    </section>
+
+    <section>
+      <h3>Tambahkan ke Kalender</h3>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Undangan+Pernikahan+Andi+dan+Rina&dates=20250701T100000/20250701T130000&details=Lokasi:+Jl.+Bahagia+No.123,+Jakarta&location=Jl.+Bahagia+No.123,+Jakarta" target="_blank">
+        <button>Tambah ke Google Kalender</button>
+      </a>
+    </section>
+
+    <section class="gallery">
+      <h3>Galeri Cinta</h3>
+      <div class="gallery-grid">
+        <img src="foto1.jpg" alt="Foto 1" />
+        <img src="foto2.jpg" alt="Foto 2" />
+        <img src="foto3.jpg" alt="Foto 3" />
+      </div>
+    </section>
+
+    <section>
+      <h3>RSVP</h3>
+      <form>
+        <input type="text" placeholder="Nama Anda" required />
+        <select required>
+          <option value="">Konfirmasi Kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Terima kasih atas doa & restu Anda 💕</p>
+    </footer>
+  </main>
+
+  <script>
+    const darkToggle = document.getElementById('toggle-dark');
+    darkToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    const openBtn = document.getElementById('open-invitation');
+    const mainContent = document.getElementById('invitation-page');
+    openBtn.addEventListener('click', () => {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+      setTimeout(() => {
+        document.querySelector('.hero').style.display = 'none';
+        mainContent.classList.remove('hidden');
+      }, 1200);
+    });
+
+    const countDownDate = new Date("July 1, 2025 10:00:00").getTime();
+    const countdownEl = document.getElementById("countdown-timer");
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      if (distance < 0) {
+        clearInterval(timer);
+        countdownEl.innerHTML = "Acara sedang berlangsung!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }, 1000);
+  </script>
+</body>
+</html>

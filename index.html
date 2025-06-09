@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wedding Of Rezza & Arischa</title>
+
+    <meta name="description" content="Dengan segala kerendahan hati, kami mengundang Anda untuk menghadiri pernikahan kami: Rezza & Arischa." />
+    <meta property="og:title" content="The Wedding Of Rezza & Arischa" />
+    <meta property="og:description" content="Selasa, 20 Juli 2027 | Bekasi" />
+    <meta property="og:image" content="foto/bg.jpeg" />
+    <meta property="og:url" content="https://rezza-arischa.wedding.com" /> <meta property="og:type" content="website" />
+
+    <link rel="icon" href="foto/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <canvas id="floral-canvas"></canvas>
+
+    <header class="hero" id="hero-section" role="banner">
+        <div class="hero-content">
+            <div class="animate-hero">
+                <p>The Wedding Of</p>
+            </div>
+            <h2 class="animate-hero">Rezza & Arischa</h2>
+            <div class="animate-hero">
+                <p class="yth">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <p class="guest-name">Nama Tamu</p>
+            </div>
+            <button id="openInvitationBtn" class="animate-hero" aria-label="Buka Undangan">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Buka Undangan
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content" class="hidden" role="main">
+
+        <div id="music-control" class="music-control-container">
+            <button id="toggleMusicBtn" aria-label="Putar atau Jeda Musik"></button>
+        </div>
+
+        <section id="couple" class="couple-section animate-on-scroll" aria-labelledby="couple-heading">
+             <h2 id="couple-heading" class="script-font">Assalamu'alaikum Wr. Wb.</h2>
+            <p>
+                Dengan memohon rahmat dan ridho Tuhan Yang Maha Esa, kami bermaksud menyelenggarakan pernikahan kami. Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+            </p>
+            <div class="couple-profile">
+                <article class="couple-card">
+                    <div class="couple-photo-frame">
+                        <img src="foto/rezza.jpg" alt="Foto Mempelai Pria, Rezza" class="couple-photo" loading="lazy"/>
+                    </div>
+                    <h3 class="script-font">Muhammad Rezza Tri Ariyavani, S.Kom</h3>
+                    <p class="couple-parents">Putra dari Bapak Adhari & Ibu Cahyati</p>
+                </article>
+                <div class="couple-separator script-font">&</div>
+                <article class="couple-card">
+                     <div class="couple-photo-frame">
+                        <img src="foto/riska.jpg" alt="Foto Mempelai Wanita, Arischa" class="couple-photo" loading="lazy"/>
+                    </div>
+                    <h3 class="script-font">Arischa Ayu Berliana, S.E</h3>
+                    <p class="couple-parents">Putri dari Bapak Edy & Ibu Handayani</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="divider-swirl animate-on-scroll">
+            <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 25C10 25 25 0 50 25S90 25 90 25" stroke="#A07C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <section id="event" class="event-section animate-on-scroll" aria-labelledby="event-heading">
+            <h2 id="event-heading" class="script-font">Save The Date</h2>
+            <div class="event-details">
+                <div class="event-card">
+                    <h3>Akad Nikah</h3>
+                    <p>Selasa, 20 Juli 2027</p>
+                    <p>Pukul 10.00 WIB</p>
+                </div>
+                <div class="event-card">
+                    <h3>Resepsi</h3>
+                    <p>Selasa, 20 Juli 2027</p>
+                    <p>Pukul 11.00 - Selesai</p>
+                </div>
+            </div>
+            <div class="address-container">
+                <address class="event-address">
+                    Yayasan Panti Asuhan Thariiqul Jannah<br>
+                    Jl. Raya Rawalumbu, Bekasi, Jawa Barat
+                </address>
+                 <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.915939229065!2d106.98980331534404!3d-6.275022895459367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dd706247387%3A0x8c2815f1347ed8d6!2sPanti%20Asuhan%20Thariiqul%20Jannah!5e0!3m2!1sen!2sid!4v1623456789012!5m2!1sen!2sid"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+         <div class="divider-swirl animate-on-scroll">
+            <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 25C10 25 25 50 50 25S90 25 90 25" stroke="#A07C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <section id="countdown" class="countdown-section animate-on-scroll" aria-labelledby="countdown-heading">
+            <h2 id="countdown-heading" class="script-font">Menuju Hari Bahagia</h2>
+            <div id="countdown-timer"></div>
+        </section>
+
+        <div class="divider-swirl animate-on-scroll">
+            <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 25C10 25 25 0 50 25S90 25 90 25" stroke="#A07C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <section id="gift" class="gift-section animate-on-scroll" aria-labelledby="gift-heading">
+            <h2 id="gift-heading" class="script-font">Wedding Gift</h2>
+            <p>Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara cashless.</p>
+            
+            <button id="showGiftButton" class="submit-button" style="margin: 1rem auto;">Kirim Hadiah</button>
+
+            <div id="giftCardContainer" class="gift-cards-container">
+                <div class="gift-card">
+                    <p class="bank-name">Bank Central Asia (BCA)</p>
+                    <p class="account-number" id="bca-number">1234567890</p>
+                    <p class="account-name">a.n. Muhammad Rezza Tri Ariyavani</p>
+                    <button class="copy-button" data-clipboard-target="#bca-number">Salin Rekening</button>
+                </div>
+                <div class="gift-card">
+                    <p class="bank-name">Bank Mandiri</p>
+                    <p class="account-number" id="mandiri-number">0987654321</p>
+                    <p class="account-name">a.n. Arischa Ayu Berliana</p>
+                    <button class="copy-button" data-clipboard-target="#mandiri-number">Salin Rekening</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-swirl animate-on-scroll">
+            <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 25C10 25 25 50 50 25S90 25 90 25" stroke="#A07C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <section id="gallery" class="gallery-section animate-on-scroll" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading" class="script-font">Momen Indah</h2>
+            <div class="gallery-grid">
+                <img src="foto/1.jpg" alt="Rezza dan Arischa foto prewedding 1" loading="lazy"/>
+                <img src="foto/2.jpg" alt="Rezza dan Arischa foto prewedding 2" loading="lazy"/>
+                <img src="foto/3.jpg" alt="Rezza dan Arischa foto prewedding 3" loading="lazy"/>
+            </div>
+        </section>
+
+        <div class="divider-swirl animate-on-scroll">
+            <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 25C10 25 25 0 50 25S90 25 90 25" stroke="#A07C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <section id="rsvp" class="rsvp-section animate-on-scroll" aria-labelledby="rsvp-heading">
+            <h2 id="rsvp-heading" class="script-font">Ucapan & Doa</h2>
+            <p>Kehadiran Anda adalah hadiah terindah. Mohon berikan ucapan dan doa restu Anda.</p>
+            <form id="rsvp-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <label for="guest-name-input">Nama</label>
+                    <input type="text" id="guest-name-input" name="nama" placeholder="Tuliskan nama Anda" required />
+                </div>
+                <div class="form-group">
+                    <label for="attendance-status">Konfirmasi Kehadiran</label>
+                    <select id="attendance-status" name="kehadiran" required>
+                        <option value="" disabled selected>Pilih Opsi Kehadiran</option>
+                        <option value="Hadir">Hadir</option>
+                        <option value="Tidak Bisa Hadir">Tidak Bisa Hadir</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="wishes-input">Ucapan & Doa</label>
+                    <textarea id="wishes-input" name="ucapan" placeholder="Tuliskan ucapan dan doa Anda" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Kirim</button>
+            </form>
+        </section>
+
+        <div class="divider-swirl animate-on-scroll">
+            <svg width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 25C10 25 25 0 50 25S90 25 90 25" stroke="#A07C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <section class="thank-you-section animate-on-scroll">
+            <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.</p>
+             <h3 class="script-font">Wassalamu'alaikum Wr. Wb.</h3>
+            <h2 class="final-couple">Rezza & Arischa</h2>
+        </section>
+        
+    </main>
+
+    <footer role="contentinfo">
+        <p>© 2027 Rezza & Arischa. All Rights Reserved.</p>
+        <p class="footer-credit">Crafted with ♥</p>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="musik/pernikahan.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
